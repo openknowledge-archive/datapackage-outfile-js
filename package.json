@@ -1,0 +1,16 @@
+{
+  "name": "datapackage-outfile-js",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {
+    "underscore": "^1.8.3"
+  },
+  "devDependencies": {
+  },
+  "scripts": {
+    "test": "mocha ./"
+  },
+  "author": "Open Knowledge",
+  "license": "MIT"
+}

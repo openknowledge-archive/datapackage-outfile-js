@@ -1,16 +1,45 @@
 {
   "name": "datapackage-outfile-js",
   "version": "0.1.0",
-  "description": "",
+  "description": "Output a file from a Data Package object.",
+  "keywords": ["data package", "frictionless data", "open data", "open knowledge"],
   "main": "index.js",
   "dependencies": {
     "underscore": "^1.8.3"
   },
   "devDependencies": {
+	"chai": "^2.3.0"
   },
   "scripts": {
     "test": "mocha ./"
   },
-  "author": "Open Knowledge",
+  "author": {
+    "name": "Open Knowledge",
+    "email": "info@okfn.org",
+    "url": "https://okfn.org/"
+  },
+  "contributors": [
+    {
+      "name": "Paul Walsh",
+      "email": "paulywalsh@gmail.com",
+      "url": "http://pwalsh.me/"
+    },
+    {
+      "name": "Artem Rudenko",
+      "email": "gvidon@ottofeller.com",
+      "url": "http://ottofeller.com/"
+    },
+    {
+      "name": "Alexey Kislyakov",
+      "email": "alexey@kislyakov.com",
+      "url": "http://ottofeller.com/"
+    }
+  ],
+  "homepage": "https://github.com/okfn/datapackage-outfile-js",
+  "bugs": "https://github.com/okfn/datapackage-outfile-js/issues",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/okfn/datapackage-outfile-js.git"
+  },
   "license": "MIT"
 }

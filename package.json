@@ -1,5 +1,5 @@
 {
-  "name": "datapackage-outfile-js",
+  "name": "datapackage-outfile",
   "version": "0.1.0",
   "description": "Output a file from a Data Package object.",
   "keywords": ["data package", "frictionless data", "open data", "open knowledge"],

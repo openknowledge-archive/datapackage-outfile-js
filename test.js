@@ -1,11 +1,11 @@
 var _ = require('underscore');
 var assert = require('chai').assert;
-var outfile = require('../datapackage-outfile');
+var outfile = require('./');
 var should = require('chai').should();
 
 var VALID_DESCRIPTOR = {
   'name': 'my-dataset',
-  
+
   'resources': [{
     'path': 'data.csv',
 
@@ -38,14 +38,14 @@ describe('Data Package Output File', function() {
 
   it('return proper mime-type', function(done, err) {
     if (err) done(err);
-    
+
     (new RegExp(/^data:application\/json:/)).exec(outfile(VALID_DESCRIPTOR)).should.be.not.empty;
     done();
   });
 
   it('return proper mime-type if old IE flag passed in params', function(done, err) {
     if (err) done(err);
-    
+
     (new RegExp(/^data:text\/plain:/)).exec(
       outfile(VALID_DESCRIPTOR, {IE9: true})
     ).should.be.not.empty;
@@ -55,10 +55,10 @@ describe('Data Package Output File', function() {
 
   it('return charset passed in options', function(done, err) {
     var charset = 'CHRSET';
-    
+
 
     if (err) done(err);
-    
+
     (new RegExp('^data:application\/json:' + charset + ',')).exec(
       outfile(VALID_DESCRIPTOR, {charset: charset})
     ).should.be.not.empty;
@@ -68,7 +68,7 @@ describe('Data Package Output File', function() {
 
   it('return utf-8 as default charset if none passed in options', function(done, err) {
     if (err) done(err);
-    
+
     (new RegExp('^data:application\/json:utf-8,')).exec(
       outfile(VALID_DESCRIPTOR)
     ).should.be.not.empty;
